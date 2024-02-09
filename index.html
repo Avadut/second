@@ -3,20 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Page</title>
     <style>
         body {
-            background-image: url("https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg&ga=GA1.1.1448711260.1707091200&semt=sph");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            height: 100vh;
-            width: 100vw;
+            /* Set the background color to light gray */
+            background-color: #f5f5f5;
+            /* Additional styles */
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Set body height to fill viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            text-align: center;
+        }
+        .login-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+        .credentials {
+            display: none;
+            margin-top: 20px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .credentials input {
+            display: block;
+            margin: 10px 0;
+            width: calc(100% - 20px);
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .credentials button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .credentials button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <h1>my git test</h1>
-    <a href="./secondpage.html" target="_self">second page</a>
+    <div class="container">
+        <h1>Welcome to the Login Page</h1>
+        <button class="login-button" onclick="showLoginForm()">Login</button>
+        <div class="credentials" id="loginForm">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <a href="./secondpage.html">secondpage</a>
+
+            <button>Sign In</button>
+            <button>Forgot Password</button>
+        </div>
+    </div>
+
+    <script>
+        function showLoginForm() {
+            var loginForm = document.getElementById("loginForm");
+            loginForm.style.display = "block";
+        }
+    </script>
 </body>
 </html>
+
